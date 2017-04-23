@@ -6,6 +6,7 @@ I have used Composer and NPM as package managers.Follow the steps:
 - install composer, npm, bower globally.
 - Update the url of the REST API (baseURL) at /dist/js/service.js;
 - Set the environment variables: CL_MYSQL_PASS and CL_MYSQL_USER according to your MySQL config;
+- Execute:
 ```
 $ php composer.phar install
 $ npm install
