@@ -1,6 +1,9 @@
 # Client Lookup App
 A simple rest app written in PHP using Slim framework as the API and Angular as the Frontend
 
+# Heroku Live Preview
+[https://php-client-lookup.herokuapp.com](https://php-client-lookup.herokuapp.com/index.html)
+
 # Build Instructions
 I have used Composer, NPM and bower as package managers. Follow the steps:
 - install npm, bower globally.
