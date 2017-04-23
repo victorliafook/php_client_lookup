@@ -7,6 +7,8 @@ function connect_db() {
 	$username = $url["user"];
 	$password = $url["pass"];
 	$database = substr($url["path"], 1);
+
+	$connection = new mysqli($server, $user, $pass, $database);
 	if ($connection->connect_error) {
 	    die("Connection failed: " . $connection->connect_error);
 	} 
