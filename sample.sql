@@ -13,4 +13,6 @@ INSERT INTO cl_client ( firstname, lastname, phone, email, address, mailing_addr
 ('Catherine','OHara','634646634', null, 'Beverly Hills, CA', 'Beverly Hills, CA', null, null),
 ('Charlize','Theron','464642222', 'charlize@theron.com', 'Elizabeth St, Sydney', 'Elizabeth St, Sydney', 1, '2018-07-07'),
 ('Danny','De Vito','664646232', 'danny2425@aol.com', 'Hay St, Sydney', 'Collin St, CA', 2, '2017-05-10'),
-('Michael','Keaton','+558532436924', 'mk343@altavista.com', 'Bronx NY', 'Bronx, NY', 3, '2020-06-10');
+('Michael','Keaton','+558532436924', 'mk343@altavista.com', 'Bronx NY', 'Bronx, NY', 3, '2020-06-10'),
+('Sylvester','Stallone','+558532441444', 'Sylv@altavista.com', 'Bronx NY', 'Bronx, NY', 3, '2017-02-10')
+;

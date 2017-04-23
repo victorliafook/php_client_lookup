@@ -22,6 +22,6 @@ CREATE TABLE IF NOT EXISTS cl_client (
 	address VARCHAR(100),
 	mailing_address VARCHAR(100),
 	membership TINYINT,
-	membership_exp_date TIMESTAMP,
-	reg_date TIMESTAMP
+	membership_exp_date TIMESTAMP NULL,
+	reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
