@@ -22,5 +22,5 @@ $ gulp default
 After these steps, the production version of the frontend app will be at /dist directory.
 Start your Apache server and access the application according to your config.
 
-# Set Database
+# Database Setup
 You must have MySQL installed. Then create a database named cl_client_lookup and then run the database.sql and the sample.sql for sample data, otherwise the database will be empty.
