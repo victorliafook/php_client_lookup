@@ -11,7 +11,10 @@
 	Mailing address
 */
 
-CREATE TABLE IF NOT EXISTS cl_client_lookup;
+
+CREATE DATABASE IF NOT EXISTS cl_client_lookup;
+
+USE cl_client_lookup;
 
 CREATE TABLE IF NOT EXISTS cl_client (
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
