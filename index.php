@@ -9,9 +9,8 @@ require 'lib/utils.php';
 $app = new \Slim\App;
 
 $app->get('/clients/search', function (Request $request, Response $response) {
-    $params = $request->getQueryParams();
     $db = connect_db();
-    $query = "SELECT * FROM cl_client where 1=1 ";
+    $query = "SELECT *, DATEDIFF(NOW(), membership_exp_date) AS daysExpired FROM cl_client where 1=1 ";
     
     //implementar geral, extensivel
     $first_name = sanitizeInput($request->getQueryParam('first_name', $default = null));
@@ -22,6 +21,9 @@ $app->get('/clients/search', function (Request $request, Response $response) {
     
     $phone = sanitizeInput($request->getQueryParam('phone', $default = null));
     if($phone) $query .= " and phone like '%{$phone}%'";
+    
+    $expiring = sanitizeInput($request->getQueryParam('expiring', $default = null));
+    if($expiring) $query .= " and DATEDIFF(NOW(), membership_exp_date) >= -30 and DATEDIFF(NOW(), membership_exp_date) <= 0";
     
 	$result = $db->query( $query );
 	$data =  array();

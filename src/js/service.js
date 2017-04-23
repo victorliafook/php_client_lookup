@@ -5,7 +5,7 @@ angular.module("client-lookup")
         return $resource(baseURL + "/clients/search");
     }])
     .service('dataService', function(){
-        this.urlParams = {firstname: 'first_name', lastname: 'last_name', phone: 'phone', page: 'page'};
+        this.urlParams = {firstname: 'first_name', lastname: 'last_name', phone: 'phone', expiring: 'expiring',page: 'page'};
         this.getParam = function(param){
             return (this.urlParams[param] !== undefined) ? this.urlParams[param] : null;
         };

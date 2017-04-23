@@ -13,20 +13,21 @@ angular.module("client-lookup")
         $scope.page = 1;
         $scope.sort = 'firstname';
         $scope.alert = "";
+        $scope.closeToExpire = false;
         
         $scope.setPage = function(page){
             $scope.page = page;
         };
         
         $scope.cleanSearch = function(){
-            $scope.title = "";
-    		$scope.year = "";
-    		$scope.type = "";
-            $scope.imdbId = "";
+            $scope.firstname = "";
+    		$scope.lastname = "";
+    		$scope.phone = "";
             
         };
         
         $scope.doSearch = function(){
+            $('#page-loading').fadeIn('fast');
             $scope.findByProp();
             
         };
@@ -42,7 +43,8 @@ angular.module("client-lookup")
             var params = [
                 {key: 'firstname', value: $scope.firstname},
                 {key: 'lastname', value: $scope.lastname},
-                {key: 'phone', value: $scope.phone}
+                {key: 'phone', value: $scope.phone},
+                {key: 'expiring', value: $scope.closeToExpire}
             ];
             clientfactory.query(dataService.getQueryObj(params)).$promise.then(function(results){
                 $scope.alert = "";
@@ -59,6 +61,7 @@ angular.module("client-lookup")
                 }
                 if($scope.alert == ""){
                     $('#searchModal').modal('hide');
+                    $('#page-loading').fadeOut('fast');
                 }
             });
         };
