@@ -37,7 +37,7 @@ gulp.task('fonts', function(){
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('usemin', 'views', 'images', 'fonts');
+    gulp.start('usemin', 'images', 'fonts');
 });
 
 // Watch
