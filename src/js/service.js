@@ -1,6 +1,6 @@
 "use strict";
 angular.module("client-lookup")
-    .constant("baseURL","https://php-client-lookup.herokuapp.com/")
+    .constant("baseURL","https://rest-client-lookup-victorliafook.c9users.io/")
     .factory('clientfactory', ['$resource', 'baseURL', function($resource, baseURL) {
         return $resource(baseURL + "/clients/search");
     }])
