@@ -64,8 +64,8 @@ angular.module("client-lookup")
                 }
                 if($scope.alert == ""){
                     $('#searchModal').modal('hide');
-                    $('#page-loading').fadeOut('fast');
                 }
+                $('#page-loading').fadeOut('fast');
             });
         };
         
